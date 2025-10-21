@@ -33,6 +33,10 @@ public class Giocanumeri {
                     for (Giocatore giocatore : manager.getsizeGiocatori()) {
                         System.out.println("Il giocatore " + giocatore.getNome() + " ha totalizzato " + giocatore.getPunteggio() + " punti.\n");
                     }
+                    break;
+                case 0:
+                    break;
+
             }
         }
     }
