@@ -1,10 +1,10 @@
 public class Giocatore extends Thread{
-    //attributi
+
     private String nome;
     private int punteggio;
     private int[] numeriInseriti;
     private int contnumeri;
-    //metodi
+
     public Giocatore(String nome){
         this.nome = nome;
         punteggio = 0;

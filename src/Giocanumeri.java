@@ -33,6 +33,8 @@ public class Giocanumeri {
                     for (Giocatore giocatore : manager.getsizeGiocatori()) {
                         System.out.println("Il giocatore " + giocatore.getNome() + " ha totalizzato " + giocatore.getPunteggio() + " punti.\n");
                     }
+                    System.out.println("i numeri vincenti erano: " + manager.getNumeri());
+                    scelta = 0;
                     break;
                 case 0:
                     break;

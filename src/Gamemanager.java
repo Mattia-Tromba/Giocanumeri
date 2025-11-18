@@ -7,10 +7,12 @@ public class Gamemanager {
     public Gamemanager(){
         giocatori =  new ArrayList<Giocatore>();
         numerivincenti = new int[3];
-        numerivincenti[0] = 7;
-        numerivincenti[1] = 85;
-        numerivincenti[2] = 44;
+        numerivincenti[0] = (int)(Math.random() * 100);
+        numerivincenti[1] = (int)(Math.random() * 100);
+        numerivincenti[2] = (int)(Math.random() * 100);
     }
+
+    public String getNumeri(){ return "" + numerivincenti[0] + " " + numerivincenti[1] + " " + numerivincenti[2];}
 
     public void setGiocatore(Giocatore g){
         giocatori.add(g);
@@ -23,10 +25,8 @@ public class Gamemanager {
     public void controllovincita(){
         for (Giocatore giocatore : giocatori) {
             for (int j=0; j<numerivincenti.length; j++) {
-                for (int y=0; y<numerivincenti.length; y++) {
-                    if (giocatore.getNumero(y) == numerivincenti[j]) {
-                        giocatore.setPunteggio(10);
-                    }
+                if(giocatore.getNumero(j) == numerivincenti[0] || giocatore.getNumero(j) == numerivincenti[1] || giocatore.getNumero(j) == numerivincenti[2]){
+                    giocatore.setPunteggio(10);
                 }
             }
         }
